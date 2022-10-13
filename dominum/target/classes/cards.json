@@ -1,0 +1,152 @@
+{
+  "cards": [
+    {
+      "name":"rame",
+      "category":"tesoro",
+      "value":1,
+      "cost": 0,
+      "numCards": 60
+    },
+    {
+      "name":"argento",
+      "category":"tesoro",
+      "value":2,
+      "cost": 3,
+      "numCards": 40
+    },
+    {
+      "name":"oro",
+      "category":"tesoro",
+      "value":3,
+      "cost": 6,
+      "numCards": 30
+    },
+    {
+      "name":"tenuta",
+      "category":"vittoria",
+      "value":1,
+      "cost": 2,
+      "numCards": 24
+    },
+    {
+      "name":"ducato",
+      "category":"vittoria",
+      "value":3,
+      "cost": 5,
+      "numCards": 12
+    },
+    {
+      "name":"provincia",
+      "category":"vittoria",
+      "value":6,
+      "cost": 8,
+      "numCards": 12
+    },
+    {
+      "name":"mercato",
+      "category":"azione",
+      "cost":5,
+      "bonus":{
+        "card":1,
+        "action":1,
+        "buy":1,
+        "coin":1
+      },
+      "numCards": 10
+    },
+    {
+      "name":"fossato",
+      "category":"azione",
+      "secondary_category": "reazione",
+      "cost":5,
+      "bonus":{
+        "card":2
+      },
+      "numCards": 10
+    },
+    {
+      "name":"miniera",
+      "category":"azione",
+      "cost":5,
+      "actions":[
+        {"type":"delete","target":"coin", "qty":1},
+        {"type":"get","target":"coin","qty":1, "delta":3,"initial_location":"field", "final_location": "hand"}
+      ],
+      "numCards": 10
+    },
+    {
+      "name":"fucina",
+      "category":"azione",
+      "cost":2,
+      "bonus":{
+        "card":3
+      },
+      "numCards": 10
+    },
+    {
+      "name":"miglioria",
+      "category":"azione",
+      "cost":4,
+      "actions":[
+        {"type":"delete","target":"any","qty":1},
+        {"type":"get","target":"any","qty":1, "delta":2, "initial_location":"field", "final_location": "discardPile"}
+      ],
+      "numCards": 10
+    },
+    {
+      "name":"milizia",
+      "category":"azione",
+      "secondary_category":"attacco",
+      "cost":4,
+      "bonus":{
+        "coin":2
+      },
+      "actions":[
+        {"type":"discard","target":"opponents","qty":3}
+      ],
+      "numCards": 10
+    },
+    {
+      "name": "villaggio",
+      "category": "azione",
+      "cost": 3,
+      "bonus": {
+        "card": 1,
+        "action": 2
+      },
+      "numCards": 10
+    },
+    {
+      "name":"officina",
+      "category":"azione",
+      "cost":3,
+      "actions":[
+        {"type":"get","target":"any","qty":1,"max_value":4, "initial_location":"field", "final_location": "discardPile"}
+      ],
+      "numCards": 10
+    },
+    {
+      "name":"taglialegna",
+      "category":"azione",
+      "cost":3,
+      "bonus":{
+        "buy":1,
+        "coin":2
+      },
+      "numCards": 10
+    },
+    {
+      "name":"cantina",
+      "category":"azione",
+      "cost":2,
+      "bonus":{
+        "action":1
+      },
+      "actions":[
+        {"type": "discard", "target": "any", "qty":-1},
+        {"type":"get","target":"any","qty":-1, "initial_location":"deck","final_location": "discardPile"}
+      ],
+      "numCards": 10
+    }
+  ]
+}
